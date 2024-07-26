@@ -6,6 +6,8 @@ import CartPage from './pages/CartPage/CartPage';
 import { useDispatch } from 'react-redux';
 import { getCategories } from './redux/reducer';
 import { useEffect } from 'react';
+import './style.scss';
+import ProductPage from './pages/ProductPage/ProductPage';
 
 function App() {
   const dispatch = useDispatch();
@@ -22,6 +24,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/cart' element={<CartPage />} />
           <Route path='/category/:category' element={<CatalogPage />} />
+          <Route path='/product/:id' element={<ProductPage/>} />
       </Routes>
     </BrowserRouter>
   );

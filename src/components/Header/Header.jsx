@@ -1,6 +1,8 @@
 import './header.scss';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import cartIcon from './icons/cart-icon.svg';
+import searchIcon from './icons/search-icon.svg';
 
 const Header = () => {
     const categories = useSelector(s => s.reducer.categories);
@@ -20,7 +22,14 @@ const Header = () => {
                     }
                 </div>
 
-                <div className="header-right"></div>
+                <div className="header-right">
+                    <Link to={'/'} >
+                        <img src={searchIcon} alt="" />
+                    </Link>
+                    <Link to={'/cart'} >
+                        <img src={cartIcon} alt="" />
+                    </Link>
+                </div>
             </div>
         </header>
     );

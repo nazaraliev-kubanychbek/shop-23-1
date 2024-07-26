@@ -1,9 +1,11 @@
+import ProductsList from "../../components/Products/ProductsList";
+import { useParams } from "react-router-dom";
 
 const CatalogPage = () => {
+    const params = useParams();
     return (
         <section>
-            <h1>catalog page</h1>
-            
+            <ProductsList limit={0} item={params.category} />
         </section>
     );
 }
